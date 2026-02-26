@@ -1,3 +1,4 @@
+> **[Click here to read the full technical Report (PDF)](./Report-Multi-Channel-Product-Catalog.pdf)**
 # Multi channel product catalog
 ![MongoDB](https://img.shields.io/badge/MongoDB-Document_DB-47A248?style=flat-square&logo=mongodb&logoColor=white)
 ![Python](https://img.shields.io/badge/Python-ETL_Engine-3776AB?style=flat-square&logo=python&logoColor=white)
