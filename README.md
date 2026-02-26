@@ -8,29 +8,29 @@ This multi channel product catalog system resolves the critical challenges of mo
 
 ## Technology Stack & Justification
 * **MongoDB (Database):** Chosen for its flexible schema, allowing the storage of polymorphic product attributes.
-* **Python & Pandas (Data Processing):** Utilized as the core ETL engine. The `json_normalize` function is critical for "flattening" deeply nested JSON structures into 2D CSV files required by external Marketplaces.
+* **Python & Pandas (Data Processing):** Utilized as the core ETL engine. The `json_normalize` function is critical for "flattening" deeply nested JSON structures into 2D CSV files required by external marketplaces.
 * **Streamlit (User Interface):** Provides a rapid, interactive CRUD (Create, Read, Update, Delete) interface for product managers.
 
 ## Core Features
 
-### 1. Data Governance & Quality Workflow
+### 1. Data governance & quality workflow
 To prevent the distribution of incomplete data, the system implements a strict state machine (`[DRAFT]` vs `[LIVE]`). 
 * A product cannot be published if mandatory fields (Price, Specific attributes based on category) are missing.
 * Visual alerts block the publication process until data integrity is resolved.
 
-### 2. Multi-Channel Export Engine
-The system dynamically structures the outgoing data feed based on the target audience:
-* **E-commerce Website (JSON):** Preserves the hierarchical nested structure for modern web front ends.
+### 2. Multi channel export engine
+The system structures the outgoing data feed based on the target audience:
+* **Ecommerce Website (JSON):** Preserves the hierarchical nested structure for modern web front ends.
 * **Marketplaces (Flattened CSV):** Unpacks technical attributes (Storage, Warranty, Material) into distinct columns for strict spreadsheet based ingestion.
-* **Social Media (Simple CSV):** Strips the data down to the bare minimum (SKU, Name, Price, Category) for lightweight advertising algorithms.
+* **Social media (Simple CSV):** Strips the data down to the bare minimum (SKU, Name, Price, Category) for lightweight advertising algorithms.
 
 ### 3. Traceability & Indexing
-* **Audit Log:** All critical actions (Create, Update, Publish) are historically tracked with timestamps.
-* **Optimized Queries:** Implements Unique Indexes (SKU) to prevent logistical duplicates and Compound Text Indexes (Name, Brand) for high-performance search capabilities.
+* **Audit log:** All critical actions (Create, Update, Publish) are historically tracked with timestamps.
+* **Optimized queries:** Implements Unique indexes (SKU) to prevent logistical duplicates and compound text indexes (Name, Brand) for high performance search capabilities.
 
-## How to Run Locally
+## How to run locally
 
-**1. Clone the repository & Install dependencies**
+**1. Clone the repository & install dependencies**
 ```bash
 git clone [https://github.com/AymaneHmadna/nosql-multichannel-catalog.git](https://github.com/AymaneHmadna/nosql-multichannel-catalog.git)
 pip install pymongo pandas streamlit
