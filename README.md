@@ -9,7 +9,7 @@ This multi channel product catalog system resolves the critical challenges of mo
 ## Technology Stack & Justification
 * **MongoDB (Database):** Chosen for its flexible schema, allowing the storage of polymorphic product attributes.
 * **Python & Pandas (Data Processing):** Utilized as the core ETL engine. The `json_normalize` function is critical for "flattening" deeply nested JSON structures into 2D CSV files required by external Marketplaces.
-* **Streamlit (User Interface):** Provides a rapid, interactive CRUD (Create, Read, Update, Delete) interface for Product Managers.
+* **Streamlit (User Interface):** Provides a rapid, interactive CRUD (Create, Read, Update, Delete) interface for product managers.
 
 ## Core Features
 
