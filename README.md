@@ -4,12 +4,7 @@
 ![Pandas](https://img.shields.io/badge/Pandas-Data_Processing-150458?style=flat-square&logo=pandas&logoColor=white)
 ![Streamlit](https://img.shields.io/badge/Streamlit-User_Interface-FF4B4B?style=flat-square&logo=streamlit&logoColor=white)
 ## Overview
-A robust Product information management system designed to centralize, validate, and distribute heterogeneous ecommerce data across multiple sales channels.
-
-## Architecture & Objective
-In a modern ecommerce ecosystem, a brand must sell products across various platforms (Website, Marketplaces, Social Media). Each platform requires a specific data structure. 
-
-This project solves the "Heterogeneous Data" problem by utilizing a **Document-Oriented NoSQL architecture**. Unlike rigid SQL tables, this system leverages JSON polymorphism to store completely different products (e.g., a T-shirt with size/color vs. a Smartphone with storage/warranty) within the same centralized repository without sparse data issues.
+This multi channel product catalog system resolves the critical challenges of modern ecommerce data management. It overcomes the rigid limitations of relational databases by utilizing a NoSQL document oriented architecture to seamlessly store polymorphic product attributes without sparse data issues. Furthermore, it eliminates the risk of publishing incomplete or inaccurate information through a strict 'Draft to Live' data governance workflow. Finally, it solves the complex distribution problem by acting as a dynamic ETL engine, instantly transforming a centralized data source into tailored, channel specific formats such as nested JSON for websites and flattened CSVs for marketplaces ensuring absolute data consistency and operational efficiency across all sales platforms.
 
 ## Technology Stack & Justification
 * **MongoDB (Database):** Chosen for its flexible schema, allowing the storage of polymorphic product attributes.
